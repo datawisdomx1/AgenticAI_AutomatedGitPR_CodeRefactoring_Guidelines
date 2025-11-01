@@ -190,7 +190,7 @@ DATABASE_PASSWORD=secure_password_123
 # LLM Configuration
 OPENAI_API_KEY=your_key_here
 DEFAULT_LLM_PROVIDER=openai
-DEFAULT_LLM_MODEL=gpt-3.5-turbo
+DEFAULT_LLM_MODEL=gpt-4o-mini
 
 # Git Integration
 GIT_USERNAME=your_username
