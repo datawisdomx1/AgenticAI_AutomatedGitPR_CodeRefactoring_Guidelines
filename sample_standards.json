@@ -1,0 +1,371 @@
+[
+  {
+    "rule_id": "PEP8-E101",
+    "title": "Indentation contains mixed spaces and tabs",
+    "description": "Use either spaces or tabs for indentation, but not both. PEP 8 recommends using 4 spaces per indentation level.",
+    "category": "formatting",
+    "severity": "high",
+    "language": "python",
+    "metadata": {
+      "source": "PEP 8",
+      "auto_fixable": true,
+      "examples": {
+        "bad": "def function():\n\t    return True",
+        "good": "def function():\n    return True"
+      }
+    }
+  },
+  {
+    "rule_id": "PEP8-E111",
+    "title": "Indentation is not a multiple of four",
+    "description": "Indentation should be exactly 4 spaces per level. Consistent indentation improves code readability.",
+    "category": "formatting",
+    "severity": "medium",
+    "language": "python",
+    "metadata": {
+      "source": "PEP 8",
+      "auto_fixable": true
+    }
+  },
+  {
+    "rule_id": "PEP8-E225",
+    "title": "Missing whitespace around operator",
+    "description": "Binary operators should be surrounded by a single space on either side. This improves readability and follows Python conventions.",
+    "category": "formatting",
+    "severity": "medium",
+    "language": "python",
+    "metadata": {
+      "source": "PEP 8",
+      "auto_fixable": true,
+      "examples": {
+        "bad": "x=y+z",
+        "good": "x = y + z"
+      }
+    }
+  },
+  {
+    "rule_id": "PEP8-E231",
+    "title": "Missing whitespace after comma",
+    "description": "Add a space after commas in function calls, lists, and other constructs to improve readability.",
+    "category": "formatting",
+    "severity": "low",
+    "language": "python",
+    "metadata": {
+      "source": "PEP 8",
+      "auto_fixable": true,
+      "examples": {
+        "bad": "func(a,b,c)",
+        "good": "func(a, b, c)"
+      }
+    }
+  },
+  {
+    "rule_id": "PEP8-E501",
+    "title": "Line too long",
+    "description": "Limit all lines to a maximum of 79 characters for code, or 72 for comments and docstrings. Long lines reduce readability.",
+    "category": "formatting",
+    "severity": "medium",
+    "language": "python",
+    "metadata": {
+      "source": "PEP 8",
+      "auto_fixable": true,
+      "max_line_length": 79
+    }
+  },
+  {
+    "rule_id": "PEP8-W291",
+    "title": "Trailing whitespace",
+    "description": "Remove trailing whitespace at the end of lines. Trailing whitespace can cause issues with version control and is unnecessary.",
+    "category": "formatting",
+    "severity": "low",
+    "language": "python",
+    "metadata": {
+      "source": "PEP 8",
+      "auto_fixable": true
+    }
+  },
+  {
+    "rule_id": "PEP8-N801",
+    "title": "Class name should use CapWords convention",
+    "description": "Class names should use the CapWords (PascalCase) convention. This distinguishes classes from functions and variables.",
+    "category": "naming",
+    "severity": "medium",
+    "language": "python",
+    "metadata": {
+      "source": "PEP 8",
+      "auto_fixable": false,
+      "examples": {
+        "bad": "class my_class:",
+        "good": "class MyClass:"
+      }
+    }
+  },
+  {
+    "rule_id": "PEP8-N802",
+    "title": "Function name should be lowercase",
+    "description": "Function names should be lowercase with words separated by underscores (snake_case). This follows Python naming conventions.",
+    "category": "naming",
+    "severity": "medium",
+    "language": "python",
+    "metadata": {
+      "source": "PEP 8",
+      "auto_fixable": false,
+      "examples": {
+        "bad": "def MyFunction():",
+        "good": "def my_function():"
+      }
+    }
+  },
+  {
+    "rule_id": "PEP8-N806",
+    "title": "Variable in function should be lowercase",
+    "description": "Variable names should be lowercase with words separated by underscores. This maintains consistency with function naming.",
+    "category": "naming",
+    "severity": "low",
+    "language": "python",
+    "metadata": {
+      "source": "PEP 8",
+      "auto_fixable": false,
+      "examples": {
+        "bad": "myVariable = 42",
+        "good": "my_variable = 42"
+      }
+    }
+  },
+  {
+    "rule_id": "FUNC-001",
+    "title": "Function is too complex",
+    "description": "Functions with high cyclomatic complexity (>10) are difficult to understand, test, and maintain. Consider breaking into smaller functions.",
+    "category": "complexity",
+    "severity": "high",
+    "language": "python",
+    "metadata": {
+      "source": "Code Quality Guidelines",
+      "auto_fixable": false,
+      "complexity_threshold": 10
+    }
+  },
+  {
+    "rule_id": "FUNC-002",
+    "title": "Function has too many parameters",
+    "description": "Functions with more than 5 parameters are difficult to use and understand. Consider using a configuration object or breaking the function apart.",
+    "category": "design",
+    "severity": "medium",
+    "language": "python",
+    "metadata": {
+      "source": "Code Quality Guidelines",
+      "auto_fixable": false,
+      "parameter_threshold": 5
+    }
+  },
+  {
+    "rule_id": "DOC-001",
+    "title": "Missing docstring",
+    "description": "All public functions, classes, and modules should have docstrings explaining their purpose, parameters, and return values.",
+    "category": "documentation",
+    "severity": "medium",
+    "language": "python",
+    "metadata": {
+      "source": "Documentation Standards",
+      "auto_fixable": false
+    }
+  },
+  {
+    "rule_id": "DOC-002",
+    "title": "Docstring should be in Google style",
+    "description": "Use Google-style docstrings for consistency. Include Args, Returns, and Raises sections as appropriate.",
+    "category": "documentation",
+    "severity": "low",
+    "language": "python",
+    "metadata": {
+      "source": "Documentation Standards",
+      "auto_fixable": false,
+      "style": "google"
+    }
+  },
+  {
+    "rule_id": "IMP-001",
+    "title": "Unused import",
+    "description": "Remove unused imports to keep the code clean and reduce memory usage. Unused imports can confuse developers about dependencies.",
+    "category": "imports",
+    "severity": "low",
+    "language": "python",
+    "metadata": {
+      "source": "Code Quality Guidelines",
+      "auto_fixable": true
+    }
+  },
+  {
+    "rule_id": "IMP-002",
+    "title": "Import should be at top of file",
+    "description": "All imports should be at the top of the file, after module docstrings and before module globals and constants.",
+    "category": "imports",
+    "severity": "medium",
+    "language": "python",
+    "metadata": {
+      "source": "PEP 8",
+      "auto_fixable": false
+    }
+  },
+  {
+    "rule_id": "IMP-003",
+    "title": "Avoid wildcard imports",
+    "description": "Avoid using 'from module import *' as it pollutes the namespace and makes it unclear where names come from.",
+    "category": "imports",
+    "severity": "high",
+    "language": "python",
+    "metadata": {
+      "source": "PEP 8",
+      "auto_fixable": false,
+      "examples": {
+        "bad": "from os import *",
+        "good": "from os import path, environ"
+      }
+    }
+  },
+  {
+    "rule_id": "SEC-001",
+    "title": "Hardcoded password or secret",
+    "description": "Avoid hardcoding passwords, API keys, or other secrets in source code. Use environment variables or secure configuration files.",
+    "category": "security",
+    "severity": "critical",
+    "language": "python",
+    "metadata": {
+      "source": "Security Guidelines",
+      "auto_fixable": false
+    }
+  },
+  {
+    "rule_id": "SEC-002",
+    "title": "Use of eval() function",
+    "description": "The eval() function can execute arbitrary code and is a security risk. Consider safer alternatives like ast.literal_eval().",
+    "category": "security",
+    "severity": "critical",
+    "language": "python",
+    "metadata": {
+      "source": "Security Guidelines",
+      "auto_fixable": false,
+      "alternatives": ["ast.literal_eval", "json.loads"]
+    }
+  },
+  {
+    "rule_id": "PERF-001",
+    "title": "Inefficient string concatenation",
+    "description": "Using '+' for multiple string concatenations is inefficient. Use join() or f-strings for better performance.",
+    "category": "performance",
+    "severity": "medium",
+    "language": "python",
+    "metadata": {
+      "source": "Performance Guidelines",
+      "auto_fixable": true,
+      "examples": {
+        "bad": "result = s1 + s2 + s3 + s4",
+        "good": "result = ''.join([s1, s2, s3, s4])"
+      }
+    }
+  },
+  {
+    "rule_id": "PERF-002",
+    "title": "Use list comprehension instead of loop",
+    "description": "List comprehensions are more Pythonic and often faster than equivalent for loops for creating lists.",
+    "category": "performance",
+    "severity": "low",
+    "language": "python",
+    "metadata": {
+      "source": "Performance Guidelines",
+      "auto_fixable": true,
+      "examples": {
+        "bad": "result = []\nfor x in items:\n    result.append(x * 2)",
+        "good": "result = [x * 2 for x in items]"
+      }
+    }
+  },
+  {
+    "rule_id": "TYPE-001",
+    "title": "Missing type hints",
+    "description": "Add type hints to function parameters and return values to improve code documentation and enable static type checking.",
+    "category": "typing",
+    "severity": "medium",
+    "language": "python",
+    "metadata": {
+      "source": "Type Checking Guidelines",
+      "auto_fixable": false,
+      "examples": {
+        "bad": "def add(a, b):",
+        "good": "def add(a: int, b: int) -> int:"
+      }
+    }
+  },
+  {
+    "rule_id": "TYPE-002",
+    "title": "Use Union for multiple types",
+    "description": "When a parameter can accept multiple types, use Union[Type1, Type2] for clarity.",
+    "category": "typing",
+    "severity": "low",
+    "language": "python",
+    "metadata": {
+      "source": "Type Checking Guidelines",
+      "auto_fixable": false,
+      "examples": {
+        "good": "from typing import Union\ndef process(value: Union[str, int]) -> str:"
+      }
+    }
+  },
+  {
+    "rule_id": "TEST-001",
+    "title": "Missing unit tests",
+    "description": "All public functions should have corresponding unit tests to ensure correctness and prevent regressions.",
+    "category": "testing",
+    "severity": "high",
+    "language": "python",
+    "metadata": {
+      "source": "Testing Guidelines",
+      "auto_fixable": false
+    }
+  },
+  {
+    "rule_id": "TEST-002",
+    "title": "Test function naming convention",
+    "description": "Test functions should start with 'test_' and have descriptive names indicating what they test.",
+    "category": "testing",
+    "severity": "low",
+    "language": "python",
+    "metadata": {
+      "source": "Testing Guidelines",
+      "auto_fixable": false,
+      "examples": {
+        "bad": "def check_addition():",
+        "good": "def test_addition_returns_correct_sum():"
+      }
+    }
+  },
+  {
+    "rule_id": "ERROR-001",
+    "title": "Bare except clause",
+    "description": "Avoid bare 'except:' clauses. Catch specific exceptions to avoid hiding bugs and make error handling more precise.",
+    "category": "error_handling",
+    "severity": "high",
+    "language": "python",
+    "metadata": {
+      "source": "Error Handling Guidelines",
+      "auto_fixable": false,
+      "examples": {
+        "bad": "try:\n    risky_operation()\nexcept:\n    pass",
+        "good": "try:\n    risky_operation()\nexcept ValueError as e:\n    handle_error(e)"
+      }
+    }
+  },
+  {
+    "rule_id": "ERROR-002",
+    "title": "Empty except block",
+    "description": "Empty except blocks hide errors silently. At minimum, log the exception or add a comment explaining why it's ignored.",
+    "category": "error_handling",
+    "severity": "medium",
+    "language": "python",
+    "metadata": {
+      "source": "Error Handling Guidelines",
+      "auto_fixable": false
+    }
+  }
+]
+

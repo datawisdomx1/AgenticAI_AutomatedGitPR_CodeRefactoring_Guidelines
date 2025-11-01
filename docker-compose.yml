@@ -1,0 +1,114 @@
+version: '3.8'
+
+services:
+  # PostgreSQL database with pgvector extension
+  postgres:
+    image: pgvector/pgvector:pg15
+    container_name: code_refactor_db
+    environment:
+      POSTGRES_DB: enterprise_code_refactor
+      POSTGRES_USER: ${DATABASE_USER:-coderefactor}
+      POSTGRES_PASSWORD: ${DATABASE_PASSWORD:-changeme123}
+      POSTGRES_HOST_AUTH_METHOD: trust
+    ports:
+      - "5432:5432"
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+      - ./database/setup_database.sql:/docker-entrypoint-initdb.d/01-setup.sql
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U ${DATABASE_USER:-coderefactor} -d enterprise_code_refactor"]
+      interval: 10s
+      timeout: 5s
+      retries: 5
+    networks:
+      - code_refactor_network
+
+  # Code refactor application
+  app:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: code_refactor_app
+    environment:
+      # Database configuration
+      DATABASE_HOST: postgres
+      DATABASE_PORT: 5432
+      DATABASE_NAME: enterprise_code_refactor
+      DATABASE_USER: ${DATABASE_USER:-coderefactor}
+      DATABASE_PASSWORD: ${DATABASE_PASSWORD:-changeme123}
+      DATABASE_URL: postgresql://${DATABASE_USER:-coderefactor}:${DATABASE_PASSWORD:-changeme123}@postgres:5432/enterprise_code_refactor
+      
+      # LLM configuration
+      OPENAI_API_KEY: ${OPENAI_API_KEY}
+      ANTHROPIC_API_KEY: ${ANTHROPIC_API_KEY}
+      DEFAULT_LLM_PROVIDER: ${DEFAULT_LLM_PROVIDER:-openai}
+      DEFAULT_LLM_MODEL: ${DEFAULT_LLM_MODEL:-gpt-3.5-turbo}
+      LLM_TEMPERATURE: ${LLM_TEMPERATURE:-0.1}
+      
+      # Git configuration
+      GIT_USERNAME: ${GIT_USERNAME}
+      GIT_TOKEN: ${GIT_TOKEN}
+      
+      # Application configuration
+      LOG_LEVEL: ${LOG_LEVEL:-INFO}
+      MAX_WORKERS: ${MAX_WORKERS:-4}
+      OUTPUT_DIR: /app/output
+      TEMP_DIR: /app/temp
+    ports:
+      - "8000:8000"
+    volumes:
+      - ./output:/app/output
+      - ./temp:/app/temp
+      - ./logs:/app/logs
+      - /var/run/docker.sock:/var/run/docker.sock  # For Docker-in-Docker if needed
+    depends_on:
+      postgres:
+        condition: service_healthy
+    networks:
+      - code_refactor_network
+    command: ["python", "main.py", "status"]
+
+  # Optional: pgAdmin for database management
+  pgadmin:
+    image: dpage/pgadmin4:latest
+    container_name: code_refactor_pgadmin
+    environment:
+      PGADMIN_DEFAULT_EMAIL: admin@coderefactor.com
+      PGADMIN_DEFAULT_PASSWORD: admin123
+      PGADMIN_CONFIG_SERVER_MODE: 'False'
+    ports:
+      - "5050:80"
+    volumes:
+      - pgadmin_data:/var/lib/pgadmin
+    depends_on:
+      - postgres
+    networks:
+      - code_refactor_network
+    profiles:
+      - tools
+
+  # Optional: Redis for caching (if needed in future)
+  redis:
+    image: redis:alpine
+    container_name: code_refactor_redis
+    ports:
+      - "6379:6379"
+    volumes:
+      - redis_data:/data
+    networks:
+      - code_refactor_network
+    profiles:
+      - cache
+
+volumes:
+  postgres_data:
+    driver: local
+  pgadmin_data:
+    driver: local
+  redis_data:
+    driver: local
+
+networks:
+  code_refactor_network:
+    driver: bridge
+

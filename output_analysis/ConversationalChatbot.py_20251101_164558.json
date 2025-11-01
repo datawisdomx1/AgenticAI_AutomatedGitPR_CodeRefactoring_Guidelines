@@ -1,0 +1,27 @@
+{
+  "file_path": "output_analysis/ConversationalChatbot.py_20251101_164558.diff",
+  "diff_content": "--- a//Users/nitinsinghal/CodeAnalysis/ConversationalChatbot.py+++ b//Users/nitinsinghal/CodeAnalysis/ConversationalChatbot.py@@ -9,7 +9,7 @@ app = Flask(__name__)\n \n @app.route('/')\n-def index():\n+def index_view:\n     return render_template('index.html')  # Serve the HTML page\n \n @app.route('/conversationalchat', methods=['POST'])\n",
+  "fixes_applied": [
+    {
+      "file_path": "/Users/nitinsinghal/CodeAnalysis/ConversationalChatbot.py",
+      "line_number": 12,
+      "column_number": null,
+      "original_code": "def index():",
+      "fixed_code": "def index_view:",
+      "violation_description": "Function names should be lowercase, with words separated by underscores as necessary to improve readability.",
+      "rule_id": "function_naming",
+      "confidence_score": 0.8
+    },
+    {
+      "file_path": "/Users/nitinsinghal/CodeAnalysis/ConversationalChatbot.py",
+      "line_number": 2,
+      "column_number": null,
+      "original_code": "from flask import Flask, request, jsonify, render_template",
+      "fixed_code": "from flask import Flask, request, jsonify, render_template",
+      "violation_description": "Imports should be grouped and ordered according to PEP 8 guidelines.",
+      "rule_id": "import_order",
+      "confidence_score": 0.9
+    }
+  ],
+  "created_at": "2025-11-01T16:45:58.997304"
+}

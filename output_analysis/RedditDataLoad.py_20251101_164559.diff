@@ -1,0 +1,30 @@
+--- a//Users/nitinsinghal/CodeAnalysis/RedditDataLoad.py+++ b//Users/nitinsinghal/CodeAnalysis/RedditDataLoad.py@@ -10,12 +10,14 @@ # Use reddit and PRAW for text extraction
+ # Topic modelling, Sentiment analysis, summary statistics
+ 
+-import praw 
++import datetime
++import praw
++from psaw import PushshiftAPI
+ from psaw import PushshiftAPI
+ import datetime
+ 
+ #Reddit API Credentials
+-reddit = praw.Reddit(user_agent='NLPtraining',
++file_handle = open('file.txt', 'r')
+                      client_id='dl6xcKOEEEHXv4mgmhzkOw', client_secret="JL7b-BYFlSUlqKg3mp2YWh39IwsWSw",
+                      username='datawisdomx', password='',
+                      ratelimit_seconds=600) #default is set to 5 seconds. Set it with a generous number so that your program does not fail                
+@@ -28,11 +30,12 @@ f.write("MsgID,Timestamp,Author,ThreadID,ThreadTitle,MsgBody,ReplyTo,Permalink\n")
+ 
+ #Begin streaming user-generated comments from the focal subreddit specified in the 'subreddit' variable earlier in this code
+-count = 1
++MAX_COUNT = 100
++count = MAX_COUNT
+ for comment in reddit.subreddit(subreddit).stream.comments():
+ 	commentID = str(comment.id) 
+ 	author = str(comment.author).replace(";", "").replace("'","").replace(",","").replace("\"","").replace("\n", " ").replace("\r"," ") 
+-	timestamp = str(datetime.datetime.fromtimestamp(comment.created)) 
++timestamp = datetime.datetime.now().isoformat()[:19]
+ 	replyTo = "" 
+ 	if not comment.is_root: #If it is indeed a reply, this column contains the message ID of the parent message. If it is not a reply, a '-' is written to this column
+ 		replyTo = str(comment.parent().id)

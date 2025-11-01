@@ -1,0 +1,27 @@
+{
+  "file_path": "output_analysis/CodeRefactoringAgents.py_20251101_164558.diff",
+  "diff_content": "--- a//Users/nitinsinghal/CodeAnalysis/CodeRefactoringAgents.py+++ b//Users/nitinsinghal/CodeAnalysis/CodeRefactoringAgents.py@@ -1,4 +1,10 @@ import asyncio\n+import json\n+import os\n+from typing import List, Dict, Any, Optional\n+from langchain_core.prompts import ChatPromptTemplate\n+from langchain_core.output_parsers import JsonOutputParser\n+from langchain_openai import ChatOpenAI\n import json\n import os\n from typing import List, Dict, Any, Optional\n@@ -47,7 +53,8 @@ \n # Function to create a child agent node\n def create_child_agent_node(agent_name: str, llm):\n-    async def agent_node(state: AgentState) -> AgentState:\n+def some_long_function_name_with_too_many_parameters(param1, param2, param3, param4,\n+    param5, param6, param7, param8, param9):\n         # Init stores\n         guidelines_store = get_vector_store(state['connection_string'], \"guidelines\")\n         analyses_store = get_vector_store(state['connection_string'], \"analyses\")\n",
+  "fixes_applied": [
+    {
+      "file_path": "/Users/nitinsinghal/CodeAnalysis/CodeRefactoringAgents.py",
+      "line_number": 50,
+      "column_number": 1,
+      "original_code": "    async def agent_node(state: AgentState) -> AgentState:",
+      "fixed_code": "def some_long_function_name_with_too_many_parameters(param1, param2, param3, param4,\n    param5, param6, param7, param8, param9):",
+      "violation_description": "Lines should not exceed 79 characters in length to improve readability.",
+      "rule_id": "line_length",
+      "confidence_score": 0.85
+    },
+    {
+      "file_path": "/Users/nitinsinghal/CodeAnalysis/CodeRefactoringAgents.py",
+      "line_number": 1,
+      "column_number": 1,
+      "original_code": "import asyncio",
+      "fixed_code": "import asyncio\nimport json\nimport os\nfrom typing import List, Dict, Any, Optional\nfrom langchain_core.prompts import ChatPromptTemplate\nfrom langchain_core.output_parsers import JsonOutputParser\nfrom langchain_openai import ChatOpenAI",
+      "violation_description": "Imports should be grouped in the following order: standard library imports, related third-party imports, and local application/library specific imports.",
+      "rule_id": "import_order",
+      "confidence_score": 0.9
+    }
+  ],
+  "created_at": "2025-11-01T16:45:58.994969"
+}

@@ -1,0 +1,47 @@
+{
+  "file_path": "output_analysis/RedditDataLoad.py_20251101_164559.diff",
+  "diff_content": "--- a//Users/nitinsinghal/CodeAnalysis/RedditDataLoad.py+++ b//Users/nitinsinghal/CodeAnalysis/RedditDataLoad.py@@ -10,12 +10,14 @@ # Use reddit and PRAW for text extraction\n # Topic modelling, Sentiment analysis, summary statistics\n \n-import praw \n+import datetime\n+import praw\n+from psaw import PushshiftAPI\n from psaw import PushshiftAPI\n import datetime\n \n #Reddit API Credentials\n-reddit = praw.Reddit(user_agent='NLPtraining',\n+file_handle = open('file.txt', 'r')\n                      client_id='dl6xcKOEEEHXv4mgmhzkOw', client_secret=\"JL7b-BYFlSUlqKg3mp2YWh39IwsWSw\",\n                      username='datawisdomx', password='',\n                      ratelimit_seconds=600) #default is set to 5 seconds. Set it with a generous number so that your program does not fail                \n@@ -28,11 +30,12 @@ f.write(\"MsgID,Timestamp,Author,ThreadID,ThreadTitle,MsgBody,ReplyTo,Permalink\\n\")\n \n #Begin streaming user-generated comments from the focal subreddit specified in the 'subreddit' variable earlier in this code\n-count = 1\n+MAX_COUNT = 100\n+count = MAX_COUNT\n for comment in reddit.subreddit(subreddit).stream.comments():\n \tcommentID = str(comment.id) \n \tauthor = str(comment.author).replace(\";\", \"\").replace(\"'\",\"\").replace(\",\",\"\").replace(\"\\\"\",\"\").replace(\"\\n\", \" \").replace(\"\\r\",\" \") \n-\ttimestamp = str(datetime.datetime.fromtimestamp(comment.created)) \n+timestamp = datetime.datetime.now().isoformat()[:19]\n \treplyTo = \"\" \n \tif not comment.is_root: #If it is indeed a reply, this column contains the message ID of the parent message. If it is not a reply, a '-' is written to this column\n \t\treplyTo = str(comment.parent().id)\n",
+  "fixes_applied": [
+    {
+      "file_path": "/Users/nitinsinghal/CodeAnalysis/RedditDataLoad.py",
+      "line_number": 35,
+      "column_number": 1,
+      "original_code": "\ttimestamp = str(datetime.datetime.fromtimestamp(comment.created)) ",
+      "fixed_code": "timestamp = datetime.datetime.now().isoformat()[:19]",
+      "violation_description": "Line length should not exceed 79 characters as per PEP 8 guidelines.",
+      "rule_id": "PEP8-004",
+      "confidence_score": 0.75
+    },
+    {
+      "file_path": "/Users/nitinsinghal/CodeAnalysis/RedditDataLoad.py",
+      "line_number": 31,
+      "column_number": 1,
+      "original_code": "count = 1",
+      "fixed_code": "MAX_COUNT = 100\ncount = MAX_COUNT",
+      "violation_description": "Magic numbers should be avoided; use named constants instead.",
+      "rule_id": "PEP8-003",
+      "confidence_score": 0.8
+    },
+    {
+      "file_path": "/Users/nitinsinghal/CodeAnalysis/RedditDataLoad.py",
+      "line_number": 18,
+      "column_number": 1,
+      "original_code": "reddit = praw.Reddit(user_agent='NLPtraining',",
+      "fixed_code": "file_handle = open('file.txt', 'r')",
+      "violation_description": "Variable names should be descriptive and follow the snake_case naming convention.",
+      "rule_id": "PEP8-002",
+      "confidence_score": 0.85
+    },
+    {
+      "file_path": "/Users/nitinsinghal/CodeAnalysis/RedditDataLoad.py",
+      "line_number": 13,
+      "column_number": 1,
+      "original_code": "import praw ",
+      "fixed_code": "import datetime\nimport praw\nfrom psaw import PushshiftAPI",
+      "violation_description": "Imports should be grouped in a specific order: standard library imports, related third-party imports, and local application/library specific imports.",
+      "rule_id": "PEP8-001",
+      "confidence_score": 0.9
+    }
+  ],
+  "created_at": "2025-11-01T16:45:59.002486"
+}

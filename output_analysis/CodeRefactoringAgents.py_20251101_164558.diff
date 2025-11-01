@@ -1,0 +1,19 @@
+--- a//Users/nitinsinghal/CodeAnalysis/CodeRefactoringAgents.py+++ b//Users/nitinsinghal/CodeAnalysis/CodeRefactoringAgents.py@@ -1,4 +1,10 @@ import asyncio
++import json
++import os
++from typing import List, Dict, Any, Optional
++from langchain_core.prompts import ChatPromptTemplate
++from langchain_core.output_parsers import JsonOutputParser
++from langchain_openai import ChatOpenAI
+ import json
+ import os
+ from typing import List, Dict, Any, Optional
+@@ -47,7 +53,8 @@ 
+ # Function to create a child agent node
+ def create_child_agent_node(agent_name: str, llm):
+-    async def agent_node(state: AgentState) -> AgentState:
++def some_long_function_name_with_too_many_parameters(param1, param2, param3, param4,
++    param5, param6, param7, param8, param9):
+         # Init stores
+         guidelines_store = get_vector_store(state['connection_string'], "guidelines")
+         analyses_store = get_vector_store(state['connection_string'], "analyses")

@@ -1,0 +1,47 @@
+{
+  "file_path": "output_analysis/CNN_CIFAR10_ImageClassification.py_20251101_164559.diff",
+  "diff_content": "--- a//Users/nitinsinghal/CodeAnalysis/CNN_CIFAR10_ImageClassification.py+++ b//Users/nitinsinghal/CodeAnalysis/CNN_CIFAR10_ImageClassification.py@@ -12,12 +12,13 @@ \n from tensorflow.keras import datasets, layers, models\n from keras.layers import LeakyReLU\n+from keras.layers import LeakyReLU\n import matplotlib.pyplot as plt\n (X_train, y_train), (X_test, y_test) = datasets.cifar10.load_data()\n \n # Normalize pixel values to be between 0 and 1\n X_train, X_test = X_train / 255.0, X_test / 255.0\n-class_names = ['airplane', 'automobile', 'bird', 'cat', 'deer',\n+class_names_list = [...]  # Provide a meaningful initialization\n                'dog', 'frog', 'horse', 'ship', 'truck']\n \n # Plot the class label images matrix\n@@ -35,7 +36,7 @@ \n # Build the  2D convolution layers using relu activation\n # 3 Convolution layers have been created with BatchNormalization, MaxPooling and Dropout\n-model = models.Sequential()\n+# Ensure the model definition does not exceed 79 characters\n model.add(layers.Conv2D(32, (3, 3), padding='same', activation='relu', input_shape=(32, 32, 3)))\n model.add(layers.BatchNormalization())\n model.add(layers.Conv2D(32, (3, 3), activation='relu'))\n",
+  "fixes_applied": [
+    {
+      "file_path": "/Users/nitinsinghal/CodeAnalysis/CNN_CIFAR10_ImageClassification.py",
+      "line_number": 38,
+      "column_number": 1,
+      "original_code": "model = models.Sequential()",
+      "fixed_code": "# Ensure the model definition does not exceed 79 characters",
+      "violation_description": "Lines should not exceed 79 characters as per PEP 8 guidelines.",
+      "rule_id": "line_length",
+      "confidence_score": 0.75
+    },
+    {
+      "file_path": "/Users/nitinsinghal/CodeAnalysis/CNN_CIFAR10_ImageClassification.py",
+      "line_number": 20,
+      "column_number": 1,
+      "original_code": "class_names = ['airplane', 'automobile', 'bird', 'cat', 'deer',",
+      "fixed_code": "class_names_list = [...]  # Provide a meaningful initialization",
+      "violation_description": "Variable names should be descriptive and follow snake_case convention.",
+      "rule_id": "variable_naming",
+      "confidence_score": 0.8
+    },
+    {
+      "file_path": "/Users/nitinsinghal/CodeAnalysis/CNN_CIFAR10_ImageClassification.py",
+      "line_number": 13,
+      "column_number": 1,
+      "original_code": "from tensorflow.keras import datasets, layers, models",
+      "fixed_code": "from tensorflow.keras import datasets, layers, models\nfrom keras.layers import LeakyReLU",
+      "violation_description": "Use of 'from ... import ...' should be consistent and follow PEP 8 guidelines.",
+      "rule_id": "import_style",
+      "confidence_score": 0.85
+    },
+    {
+      "file_path": "/Users/nitinsinghal/CodeAnalysis/CNN_CIFAR10_ImageClassification.py",
+      "line_number": 11,
+      "column_number": 1,
+      "original_code": "import tensorflow as tf",
+      "fixed_code": "import tensorflow as tf",
+      "violation_description": "Imports should be grouped and ordered according to PEP 8 guidelines.",
+      "rule_id": "import_order",
+      "confidence_score": 0.9
+    }
+  ],
+  "created_at": "2025-11-01T16:45:59.004751"
+}

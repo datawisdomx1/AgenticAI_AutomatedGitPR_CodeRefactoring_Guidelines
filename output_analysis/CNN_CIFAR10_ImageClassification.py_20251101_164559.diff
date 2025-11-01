@@ -1,0 +1,22 @@
+--- a//Users/nitinsinghal/CodeAnalysis/CNN_CIFAR10_ImageClassification.py+++ b//Users/nitinsinghal/CodeAnalysis/CNN_CIFAR10_ImageClassification.py@@ -12,12 +12,13 @@ 
+ from tensorflow.keras import datasets, layers, models
+ from keras.layers import LeakyReLU
++from keras.layers import LeakyReLU
+ import matplotlib.pyplot as plt
+ (X_train, y_train), (X_test, y_test) = datasets.cifar10.load_data()
+ 
+ # Normalize pixel values to be between 0 and 1
+ X_train, X_test = X_train / 255.0, X_test / 255.0
+-class_names = ['airplane', 'automobile', 'bird', 'cat', 'deer',
++class_names_list = [...]  # Provide a meaningful initialization
+                'dog', 'frog', 'horse', 'ship', 'truck']
+ 
+ # Plot the class label images matrix
+@@ -35,7 +36,7 @@ 
+ # Build the  2D convolution layers using relu activation
+ # 3 Convolution layers have been created with BatchNormalization, MaxPooling and Dropout
+-model = models.Sequential()
++# Ensure the model definition does not exceed 79 characters
+ model.add(layers.Conv2D(32, (3, 3), padding='same', activation='relu', input_shape=(32, 32, 3)))
+ model.add(layers.BatchNormalization())
+ model.add(layers.Conv2D(32, (3, 3), activation='relu'))

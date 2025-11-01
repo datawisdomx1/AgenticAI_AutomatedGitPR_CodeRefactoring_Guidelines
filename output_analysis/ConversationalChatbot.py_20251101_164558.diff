@@ -1,0 +1,8 @@
+--- a//Users/nitinsinghal/CodeAnalysis/ConversationalChatbot.py+++ b//Users/nitinsinghal/CodeAnalysis/ConversationalChatbot.py@@ -9,7 +9,7 @@ app = Flask(__name__)
+ 
+ @app.route('/')
+-def index():
++def index_view:
+     return render_template('index.html')  # Serve the HTML page
+ 
+ @app.route('/conversationalchat', methods=['POST'])

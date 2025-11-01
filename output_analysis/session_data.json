@@ -1,0 +1,738 @@
+{
+  "session_id": "54d8e15f-2535-4e83-9631-e6499c9b4f50",
+  "session_name": "CodeAnalysis_Nov2025_v2",
+  "source_type": "folder",
+  "source_path": "/Users/nitinsinghal/CodeAnalysis",
+  "status": "completed",
+  "total_files": 10,
+  "processed_files": 10,
+  "failed_files": 0,
+  "created_at": "2025-11-01T21:26:00.692190+00:00",
+  "updated_at": "2025-11-01T21:26:01.905130+00:00",
+  "files": [
+    {
+      "file_path": "/Users/nitinsinghal/CodeAnalysis/CNN_CIFAR10_ImageClassification.py",
+      "analysis_status": "pending",
+      "lines_of_code": 91,
+      "complexity_score": 0,
+      "processing_time": 0.0,
+      "violation_count": 4,
+      "violations": [
+        {
+          "rule_id": "IMP-001",
+          "category": "imports",
+          "severity": "low",
+          "line_number": null,
+          "column_number": null,
+          "description": "Potential violation of: Unused import",
+          "suggested_fix": "Remove unused imports to keep the code clean and reduce memory usage. Unused imports can confuse developers about dependencies.",
+          "confidence_score": 0.4554983513205916,
+          "rule_title": "Unused import",
+          "rule_description": "Remove unused imports to keep the code clean and reduce memory usage. Unused imports can confuse developers about dependencies."
+        },
+        {
+          "rule_id": "IMP-002",
+          "category": "imports",
+          "severity": "medium",
+          "line_number": null,
+          "column_number": null,
+          "description": "Potential violation of: Import should be at top of file",
+          "suggested_fix": "All imports should be at the top of the file, after module docstrings and before module globals and constants.",
+          "confidence_score": 0.41403929633020753,
+          "rule_title": "Import should be at top of file",
+          "rule_description": "All imports should be at the top of the file, after module docstrings and before module globals and constants."
+        },
+        {
+          "rule_id": "IMP-003",
+          "category": "imports",
+          "severity": "high",
+          "line_number": null,
+          "column_number": null,
+          "description": "Potential violation of: Avoid wildcard imports",
+          "suggested_fix": "Avoid using 'from module import *' as it pollutes the namespace and makes it unclear where names come from.",
+          "confidence_score": 0.3960253714330748,
+          "rule_title": "Avoid wildcard imports",
+          "rule_description": "Avoid using 'from module import *' as it pollutes the namespace and makes it unclear where names come from."
+        },
+        {
+          "rule_id": "PERF-002",
+          "category": "performance",
+          "severity": "low",
+          "line_number": null,
+          "column_number": null,
+          "description": "Potential violation of: Use list comprehension instead of loop",
+          "suggested_fix": "List comprehensions are more Pythonic and often faster than equivalent for loops for creating lists.",
+          "confidence_score": 0.3303152227025983,
+          "rule_title": "Use list comprehension instead of loop",
+          "rule_description": "List comprehensions are more Pythonic and often faster than equivalent for loops for creating lists."
+        }
+      ]
+    },
+    {
+      "file_path": "/Users/nitinsinghal/CodeAnalysis/CodeRefactoringAgents.py",
+      "analysis_status": "pending",
+      "lines_of_code": 149,
+      "complexity_score": 0,
+      "processing_time": 0.0,
+      "violation_count": 7,
+      "violations": [
+        {
+          "rule_id": "IMP-001",
+          "category": "imports",
+          "severity": "low",
+          "line_number": null,
+          "column_number": null,
+          "description": "Potential violation of: Unused import",
+          "suggested_fix": "Remove unused imports to keep the code clean and reduce memory usage. Unused imports can confuse developers about dependencies.",
+          "confidence_score": 0.44024130589281796,
+          "rule_title": "Unused import",
+          "rule_description": "Remove unused imports to keep the code clean and reduce memory usage. Unused imports can confuse developers about dependencies."
+        },
+        {
+          "rule_id": "PERF-002",
+          "category": "performance",
+          "severity": "low",
+          "line_number": null,
+          "column_number": null,
+          "description": "Potential violation of: Use list comprehension instead of loop",
+          "suggested_fix": "List comprehensions are more Pythonic and often faster than equivalent for loops for creating lists.",
+          "confidence_score": 0.39649696904385,
+          "rule_title": "Use list comprehension instead of loop",
+          "rule_description": "List comprehensions are more Pythonic and often faster than equivalent for loops for creating lists."
+        },
+        {
+          "rule_id": "PEP8-E501",
+          "category": "formatting",
+          "severity": "medium",
+          "line_number": null,
+          "column_number": null,
+          "description": "Potential violation of: Line too long",
+          "suggested_fix": "Limit all lines to a maximum of 79 characters for code, or 72 for comments and docstrings. Long lines reduce readability.",
+          "confidence_score": 0.3756156825446624,
+          "rule_title": "Line too long",
+          "rule_description": "Limit all lines to a maximum of 79 characters for code, or 72 for comments and docstrings. Long lines reduce readability."
+        },
+        {
+          "rule_id": "IMP-003",
+          "category": "imports",
+          "severity": "high",
+          "line_number": null,
+          "column_number": null,
+          "description": "Potential violation of: Avoid wildcard imports",
+          "suggested_fix": "Avoid using 'from module import *' as it pollutes the namespace and makes it unclear where names come from.",
+          "confidence_score": 0.3701961139370511,
+          "rule_title": "Avoid wildcard imports",
+          "rule_description": "Avoid using 'from module import *' as it pollutes the namespace and makes it unclear where names come from."
+        },
+        {
+          "rule_id": "IMP-002",
+          "category": "imports",
+          "severity": "medium",
+          "line_number": null,
+          "column_number": null,
+          "description": "Potential violation of: Import should be at top of file",
+          "suggested_fix": "All imports should be at the top of the file, after module docstrings and before module globals and constants.",
+          "confidence_score": 0.3636604926867616,
+          "rule_title": "Import should be at top of file",
+          "rule_description": "All imports should be at the top of the file, after module docstrings and before module globals and constants."
+        },
+        {
+          "rule_id": "FUNC-001",
+          "category": "complexity",
+          "severity": "high",
+          "line_number": null,
+          "column_number": null,
+          "description": "Potential violation of: Function is too complex",
+          "suggested_fix": "Functions with high cyclomatic complexity (>10) are difficult to understand, test, and maintain. Consider breaking into smaller functions.",
+          "confidence_score": 0.335563749473766,
+          "rule_title": "Function is too complex",
+          "rule_description": "Functions with high cyclomatic complexity (>10) are difficult to understand, test, and maintain. Consider breaking into smaller functions."
+        },
+        {
+          "rule_id": "PEP8-N802",
+          "category": "naming",
+          "severity": "medium",
+          "line_number": null,
+          "column_number": null,
+          "description": "Potential violation of: Function name should be lowercase",
+          "suggested_fix": "Function names should be lowercase with words separated by underscores (snake_case). This follows Python naming conventions.",
+          "confidence_score": 0.30963110499938273,
+          "rule_title": "Function name should be lowercase",
+          "rule_description": "Function names should be lowercase with words separated by underscores (snake_case). This follows Python naming conventions."
+        }
+      ]
+    },
+    {
+      "file_path": "/Users/nitinsinghal/CodeAnalysis/ConversationalChatbot.py",
+      "analysis_status": "pending",
+      "lines_of_code": 37,
+      "complexity_score": 0,
+      "processing_time": 0.0,
+      "violation_count": 6,
+      "violations": [
+        {
+          "rule_id": "IMP-001",
+          "category": "imports",
+          "severity": "low",
+          "line_number": null,
+          "column_number": null,
+          "description": "Potential violation of: Unused import",
+          "suggested_fix": "Remove unused imports to keep the code clean and reduce memory usage. Unused imports can confuse developers about dependencies.",
+          "confidence_score": 0.40996483653470306,
+          "rule_title": "Unused import",
+          "rule_description": "Remove unused imports to keep the code clean and reduce memory usage. Unused imports can confuse developers about dependencies."
+        },
+        {
+          "rule_id": "IMP-003",
+          "category": "imports",
+          "severity": "high",
+          "line_number": null,
+          "column_number": null,
+          "description": "Potential violation of: Avoid wildcard imports",
+          "suggested_fix": "Avoid using 'from module import *' as it pollutes the namespace and makes it unclear where names come from.",
+          "confidence_score": 0.3862004327357287,
+          "rule_title": "Avoid wildcard imports",
+          "rule_description": "Avoid using 'from module import *' as it pollutes the namespace and makes it unclear where names come from."
+        },
+        {
+          "rule_id": "IMP-002",
+          "category": "imports",
+          "severity": "medium",
+          "line_number": null,
+          "column_number": null,
+          "description": "Potential violation of: Import should be at top of file",
+          "suggested_fix": "All imports should be at the top of the file, after module docstrings and before module globals and constants.",
+          "confidence_score": 0.38577652446418575,
+          "rule_title": "Import should be at top of file",
+          "rule_description": "All imports should be at the top of the file, after module docstrings and before module globals and constants."
+        },
+        {
+          "rule_id": "PERF-002",
+          "category": "performance",
+          "severity": "low",
+          "line_number": null,
+          "column_number": null,
+          "description": "Potential violation of: Use list comprehension instead of loop",
+          "suggested_fix": "List comprehensions are more Pythonic and often faster than equivalent for loops for creating lists.",
+          "confidence_score": 0.3769489898116005,
+          "rule_title": "Use list comprehension instead of loop",
+          "rule_description": "List comprehensions are more Pythonic and often faster than equivalent for loops for creating lists."
+        },
+        {
+          "rule_id": "PEP8-N802",
+          "category": "naming",
+          "severity": "medium",
+          "line_number": null,
+          "column_number": null,
+          "description": "Potential violation of: Function name should be lowercase",
+          "suggested_fix": "Function names should be lowercase with words separated by underscores (snake_case). This follows Python naming conventions.",
+          "confidence_score": 0.36463829874992637,
+          "rule_title": "Function name should be lowercase",
+          "rule_description": "Function names should be lowercase with words separated by underscores (snake_case). This follows Python naming conventions."
+        },
+        {
+          "rule_id": "PEP8-E501",
+          "category": "formatting",
+          "severity": "medium",
+          "line_number": null,
+          "column_number": null,
+          "description": "Potential violation of: Line too long",
+          "suggested_fix": "Limit all lines to a maximum of 79 characters for code, or 72 for comments and docstrings. Long lines reduce readability.",
+          "confidence_score": 0.3469301358780239,
+          "rule_title": "Line too long",
+          "rule_description": "Limit all lines to a maximum of 79 characters for code, or 72 for comments and docstrings. Long lines reduce readability."
+        }
+      ]
+    },
+    {
+      "file_path": "/Users/nitinsinghal/CodeAnalysis/Kaggle_NFLBigdataBowl22.py",
+      "analysis_status": "pending",
+      "lines_of_code": 167,
+      "complexity_score": 0,
+      "processing_time": 0.0,
+      "violation_count": 4,
+      "violations": [
+        {
+          "rule_id": "IMP-001",
+          "category": "imports",
+          "severity": "low",
+          "line_number": null,
+          "column_number": null,
+          "description": "Potential violation of: Unused import",
+          "suggested_fix": "Remove unused imports to keep the code clean and reduce memory usage. Unused imports can confuse developers about dependencies.",
+          "confidence_score": 0.39057240401856586,
+          "rule_title": "Unused import",
+          "rule_description": "Remove unused imports to keep the code clean and reduce memory usage. Unused imports can confuse developers about dependencies."
+        },
+        {
+          "rule_id": "IMP-002",
+          "category": "imports",
+          "severity": "medium",
+          "line_number": null,
+          "column_number": null,
+          "description": "Potential violation of: Import should be at top of file",
+          "suggested_fix": "All imports should be at the top of the file, after module docstrings and before module globals and constants.",
+          "confidence_score": 0.32257494234219375,
+          "rule_title": "Import should be at top of file",
+          "rule_description": "All imports should be at the top of the file, after module docstrings and before module globals and constants."
+        },
+        {
+          "rule_id": "IMP-003",
+          "category": "imports",
+          "severity": "high",
+          "line_number": null,
+          "column_number": null,
+          "description": "Potential violation of: Avoid wildcard imports",
+          "suggested_fix": "Avoid using 'from module import *' as it pollutes the namespace and makes it unclear where names come from.",
+          "confidence_score": 0.34405517673986497,
+          "rule_title": "Avoid wildcard imports",
+          "rule_description": "Avoid using 'from module import *' as it pollutes the namespace and makes it unclear where names come from."
+        },
+        {
+          "rule_id": "PERF-002",
+          "category": "performance",
+          "severity": "low",
+          "line_number": null,
+          "column_number": null,
+          "description": "Potential violation of: Use list comprehension instead of loop",
+          "suggested_fix": "List comprehensions are more Pythonic and often faster than equivalent for loops for creating lists.",
+          "confidence_score": 0.3412021493195212,
+          "rule_title": "Use list comprehension instead of loop",
+          "rule_description": "List comprehensions are more Pythonic and often faster than equivalent for loops for creating lists."
+        }
+      ]
+    },
+    {
+      "file_path": "/Users/nitinsinghal/CodeAnalysis/Kaggle_StoreSalesForecast.py",
+      "analysis_status": "pending",
+      "lines_of_code": 166,
+      "complexity_score": 0,
+      "processing_time": 0.0,
+      "violation_count": 5,
+      "violations": [
+        {
+          "rule_id": "IMP-001",
+          "category": "imports",
+          "severity": "low",
+          "line_number": null,
+          "column_number": null,
+          "description": "Potential violation of: Unused import",
+          "suggested_fix": "Remove unused imports to keep the code clean and reduce memory usage. Unused imports can confuse developers about dependencies.",
+          "confidence_score": 0.38663434783136497,
+          "rule_title": "Unused import",
+          "rule_description": "Remove unused imports to keep the code clean and reduce memory usage. Unused imports can confuse developers about dependencies."
+        },
+        {
+          "rule_id": "PERF-002",
+          "category": "performance",
+          "severity": "low",
+          "line_number": null,
+          "column_number": null,
+          "description": "Potential violation of: Use list comprehension instead of loop",
+          "suggested_fix": "List comprehensions are more Pythonic and often faster than equivalent for loops for creating lists.",
+          "confidence_score": 0.3331829905509949,
+          "rule_title": "Use list comprehension instead of loop",
+          "rule_description": "List comprehensions are more Pythonic and often faster than equivalent for loops for creating lists."
+        },
+        {
+          "rule_id": "IMP-003",
+          "category": "imports",
+          "severity": "high",
+          "line_number": null,
+          "column_number": null,
+          "description": "Potential violation of: Avoid wildcard imports",
+          "suggested_fix": "Avoid using 'from module import *' as it pollutes the namespace and makes it unclear where names come from.",
+          "confidence_score": 0.3325886327905443,
+          "rule_title": "Avoid wildcard imports",
+          "rule_description": "Avoid using 'from module import *' as it pollutes the namespace and makes it unclear where names come from."
+        },
+        {
+          "rule_id": "IMP-002",
+          "category": "imports",
+          "severity": "medium",
+          "line_number": null,
+          "column_number": null,
+          "description": "Potential violation of: Import should be at top of file",
+          "suggested_fix": "All imports should be at the top of the file, after module docstrings and before module globals and constants.",
+          "confidence_score": 0.3211195351361571,
+          "rule_title": "Import should be at top of file",
+          "rule_description": "All imports should be at the top of the file, after module docstrings and before module globals and constants."
+        },
+        {
+          "rule_id": "PEP8-E501",
+          "category": "formatting",
+          "severity": "medium",
+          "line_number": null,
+          "column_number": null,
+          "description": "Potential violation of: Line too long",
+          "suggested_fix": "Limit all lines to a maximum of 79 characters for code, or 72 for comments and docstrings. Long lines reduce readability.",
+          "confidence_score": 0.3163713311067622,
+          "rule_title": "Line too long",
+          "rule_description": "Limit all lines to a maximum of 79 characters for code, or 72 for comments and docstrings. Long lines reduce readability."
+        }
+      ]
+    },
+    {
+      "file_path": "/Users/nitinsinghal/CodeAnalysis/LSTMANNRFRegressor_KaggleAllStateClaims.py",
+      "analysis_status": "pending",
+      "lines_of_code": 211,
+      "complexity_score": 0,
+      "processing_time": 0.0,
+      "violation_count": 5,
+      "violations": [
+        {
+          "rule_id": "IMP-001",
+          "category": "imports",
+          "severity": "low",
+          "line_number": null,
+          "column_number": null,
+          "description": "Potential violation of: Unused import",
+          "suggested_fix": "Remove unused imports to keep the code clean and reduce memory usage. Unused imports can confuse developers about dependencies.",
+          "confidence_score": 0.4347287817981189,
+          "rule_title": "Unused import",
+          "rule_description": "Remove unused imports to keep the code clean and reduce memory usage. Unused imports can confuse developers about dependencies."
+        },
+        {
+          "rule_id": "IMP-002",
+          "category": "imports",
+          "severity": "medium",
+          "line_number": null,
+          "column_number": null,
+          "description": "Potential violation of: Import should be at top of file",
+          "suggested_fix": "All imports should be at the top of the file, after module docstrings and before module globals and constants.",
+          "confidence_score": 0.3734880904817851,
+          "rule_title": "Import should be at top of file",
+          "rule_description": "All imports should be at the top of the file, after module docstrings and before module globals and constants."
+        },
+        {
+          "rule_id": "IMP-003",
+          "category": "imports",
+          "severity": "high",
+          "line_number": null,
+          "column_number": null,
+          "description": "Potential violation of: Avoid wildcard imports",
+          "suggested_fix": "Avoid using 'from module import *' as it pollutes the namespace and makes it unclear where names come from.",
+          "confidence_score": 0.36283485973920215,
+          "rule_title": "Avoid wildcard imports",
+          "rule_description": "Avoid using 'from module import *' as it pollutes the namespace and makes it unclear where names come from."
+        },
+        {
+          "rule_id": "PERF-002",
+          "category": "performance",
+          "severity": "low",
+          "line_number": null,
+          "column_number": null,
+          "description": "Potential violation of: Use list comprehension instead of loop",
+          "suggested_fix": "List comprehensions are more Pythonic and often faster than equivalent for loops for creating lists.",
+          "confidence_score": 0.3257952221922944,
+          "rule_title": "Use list comprehension instead of loop",
+          "rule_description": "List comprehensions are more Pythonic and often faster than equivalent for loops for creating lists."
+        },
+        {
+          "rule_id": "PEP8-E501",
+          "category": "formatting",
+          "severity": "medium",
+          "line_number": null,
+          "column_number": null,
+          "description": "Potential violation of: Line too long",
+          "suggested_fix": "Limit all lines to a maximum of 79 characters for code, or 72 for comments and docstrings. Long lines reduce readability.",
+          "confidence_score": 0.31012877406992667,
+          "rule_title": "Line too long",
+          "rule_description": "Limit all lines to a maximum of 79 characters for code, or 72 for comments and docstrings. Long lines reduce readability."
+        }
+      ]
+    },
+    {
+      "file_path": "/Users/nitinsinghal/CodeAnalysis/NLP_TopicModel.py",
+      "analysis_status": "pending",
+      "lines_of_code": 156,
+      "complexity_score": 0,
+      "processing_time": 0.0,
+      "violation_count": 7,
+      "violations": [
+        {
+          "rule_id": "IMP-003",
+          "category": "imports",
+          "severity": "high",
+          "line_number": null,
+          "column_number": null,
+          "description": "Potential violation of: Avoid wildcard imports",
+          "suggested_fix": "Avoid using 'from module import *' as it pollutes the namespace and makes it unclear where names come from.",
+          "confidence_score": 0.4357718412468181,
+          "rule_title": "Avoid wildcard imports",
+          "rule_description": "Avoid using 'from module import *' as it pollutes the namespace and makes it unclear where names come from."
+        },
+        {
+          "rule_id": "IMP-001",
+          "category": "imports",
+          "severity": "low",
+          "line_number": null,
+          "column_number": null,
+          "description": "Potential violation of: Unused import",
+          "suggested_fix": "Remove unused imports to keep the code clean and reduce memory usage. Unused imports can confuse developers about dependencies.",
+          "confidence_score": 0.43492617039552706,
+          "rule_title": "Unused import",
+          "rule_description": "Remove unused imports to keep the code clean and reduce memory usage. Unused imports can confuse developers about dependencies."
+        },
+        {
+          "rule_id": "IMP-002",
+          "category": "imports",
+          "severity": "medium",
+          "line_number": null,
+          "column_number": null,
+          "description": "Potential violation of: Import should be at top of file",
+          "suggested_fix": "All imports should be at the top of the file, after module docstrings and before module globals and constants.",
+          "confidence_score": 0.40287206820346433,
+          "rule_title": "Import should be at top of file",
+          "rule_description": "All imports should be at the top of the file, after module docstrings and before module globals and constants."
+        },
+        {
+          "rule_id": "PEP8-E501",
+          "category": "formatting",
+          "severity": "medium",
+          "line_number": null,
+          "column_number": null,
+          "description": "Potential violation of: Line too long",
+          "suggested_fix": "Limit all lines to a maximum of 79 characters for code, or 72 for comments and docstrings. Long lines reduce readability.",
+          "confidence_score": 0.402648830571701,
+          "rule_title": "Line too long",
+          "rule_description": "Limit all lines to a maximum of 79 characters for code, or 72 for comments and docstrings. Long lines reduce readability."
+        },
+        {
+          "rule_id": "PERF-002",
+          "category": "performance",
+          "severity": "low",
+          "line_number": null,
+          "column_number": null,
+          "description": "Potential violation of: Use list comprehension instead of loop",
+          "suggested_fix": "List comprehensions are more Pythonic and often faster than equivalent for loops for creating lists.",
+          "confidence_score": 0.3355941574452568,
+          "rule_title": "Use list comprehension instead of loop",
+          "rule_description": "List comprehensions are more Pythonic and often faster than equivalent for loops for creating lists."
+        },
+        {
+          "rule_id": "PEP8-N802",
+          "category": "naming",
+          "severity": "medium",
+          "line_number": null,
+          "column_number": null,
+          "description": "Potential violation of: Function name should be lowercase",
+          "suggested_fix": "Function names should be lowercase with words separated by underscores (snake_case). This follows Python naming conventions.",
+          "confidence_score": 0.3095239379576391,
+          "rule_title": "Function name should be lowercase",
+          "rule_description": "Function names should be lowercase with words separated by underscores (snake_case). This follows Python naming conventions."
+        },
+        {
+          "rule_id": "PEP8-E225",
+          "category": "formatting",
+          "severity": "medium",
+          "line_number": null,
+          "column_number": null,
+          "description": "Potential violation of: Missing whitespace around operator",
+          "suggested_fix": "Binary operators should be surrounded by a single space on either side. This improves readability and follows Python conventions.",
+          "confidence_score": 0.3041551916553036,
+          "rule_title": "Missing whitespace around operator",
+          "rule_description": "Binary operators should be surrounded by a single space on either side. This improves readability and follows Python conventions."
+        }
+      ]
+    },
+    {
+      "file_path": "/Users/nitinsinghal/CodeAnalysis/RedditDataLoad.py",
+      "analysis_status": "pending",
+      "lines_of_code": 160,
+      "complexity_score": 0,
+      "processing_time": 0.0,
+      "violation_count": 5,
+      "violations": [
+        {
+          "rule_id": "IMP-001",
+          "category": "imports",
+          "severity": "low",
+          "line_number": null,
+          "column_number": null,
+          "description": "Potential violation of: Unused import",
+          "suggested_fix": "Remove unused imports to keep the code clean and reduce memory usage. Unused imports can confuse developers about dependencies.",
+          "confidence_score": 0.4446619550581631,
+          "rule_title": "Unused import",
+          "rule_description": "Remove unused imports to keep the code clean and reduce memory usage. Unused imports can confuse developers about dependencies."
+        },
+        {
+          "rule_id": "IMP-002",
+          "category": "imports",
+          "severity": "medium",
+          "line_number": null,
+          "column_number": null,
+          "description": "Potential violation of: Import should be at top of file",
+          "suggested_fix": "All imports should be at the top of the file, after module docstrings and before module globals and constants.",
+          "confidence_score": 0.38783440481136733,
+          "rule_title": "Import should be at top of file",
+          "rule_description": "All imports should be at the top of the file, after module docstrings and before module globals and constants."
+        },
+        {
+          "rule_id": "IMP-003",
+          "category": "imports",
+          "severity": "high",
+          "line_number": null,
+          "column_number": null,
+          "description": "Potential violation of: Avoid wildcard imports",
+          "suggested_fix": "Avoid using 'from module import *' as it pollutes the namespace and makes it unclear where names come from.",
+          "confidence_score": 0.3841920242481337,
+          "rule_title": "Avoid wildcard imports",
+          "rule_description": "Avoid using 'from module import *' as it pollutes the namespace and makes it unclear where names come from."
+        },
+        {
+          "rule_id": "PERF-002",
+          "category": "performance",
+          "severity": "low",
+          "line_number": null,
+          "column_number": null,
+          "description": "Potential violation of: Use list comprehension instead of loop",
+          "suggested_fix": "List comprehensions are more Pythonic and often faster than equivalent for loops for creating lists.",
+          "confidence_score": 0.3511780291093577,
+          "rule_title": "Use list comprehension instead of loop",
+          "rule_description": "List comprehensions are more Pythonic and often faster than equivalent for loops for creating lists."
+        },
+        {
+          "rule_id": "PEP8-E501",
+          "category": "formatting",
+          "severity": "medium",
+          "line_number": null,
+          "column_number": null,
+          "description": "Potential violation of: Line too long",
+          "suggested_fix": "Limit all lines to a maximum of 79 characters for code, or 72 for comments and docstrings. Long lines reduce readability.",
+          "confidence_score": 0.34793980872810604,
+          "rule_title": "Line too long",
+          "rule_description": "Limit all lines to a maximum of 79 characters for code, or 72 for comments and docstrings. Long lines reduce readability."
+        }
+      ]
+    },
+    {
+      "file_path": "/Users/nitinsinghal/CodeAnalysis/ReinfLearn_Example.py",
+      "analysis_status": "pending",
+      "lines_of_code": 47,
+      "complexity_score": 0,
+      "processing_time": 0.0,
+      "violation_count": 4,
+      "violations": [
+        {
+          "rule_id": "PEP8-E501",
+          "category": "formatting",
+          "severity": "medium",
+          "line_number": null,
+          "column_number": null,
+          "description": "Potential violation of: Line too long",
+          "suggested_fix": "Limit all lines to a maximum of 79 characters for code, or 72 for comments and docstrings. Long lines reduce readability.",
+          "confidence_score": 0.41744853570137364,
+          "rule_title": "Line too long",
+          "rule_description": "Limit all lines to a maximum of 79 characters for code, or 72 for comments and docstrings. Long lines reduce readability."
+        },
+        {
+          "rule_id": "PERF-002",
+          "category": "performance",
+          "severity": "low",
+          "line_number": null,
+          "column_number": null,
+          "description": "Potential violation of: Use list comprehension instead of loop",
+          "suggested_fix": "List comprehensions are more Pythonic and often faster than equivalent for loops for creating lists.",
+          "confidence_score": 0.40770647044576713,
+          "rule_title": "Use list comprehension instead of loop",
+          "rule_description": "List comprehensions are more Pythonic and often faster than equivalent for loops for creating lists."
+        },
+        {
+          "rule_id": "FUNC-001",
+          "category": "complexity",
+          "severity": "high",
+          "line_number": null,
+          "column_number": null,
+          "description": "Potential violation of: Function is too complex",
+          "suggested_fix": "Functions with high cyclomatic complexity (>10) are difficult to understand, test, and maintain. Consider breaking into smaller functions.",
+          "confidence_score": 0.359908298234884,
+          "rule_title": "Function is too complex",
+          "rule_description": "Functions with high cyclomatic complexity (>10) are difficult to understand, test, and maintain. Consider breaking into smaller functions."
+        },
+        {
+          "rule_id": "PEP8-E225",
+          "category": "formatting",
+          "severity": "medium",
+          "line_number": null,
+          "column_number": null,
+          "description": "Potential violation of: Missing whitespace around operator",
+          "suggested_fix": "Binary operators should be surrounded by a single space on either side. This improves readability and follows Python conventions.",
+          "confidence_score": 0.31085362829450114,
+          "rule_title": "Missing whitespace around operator",
+          "rule_description": "Binary operators should be surrounded by a single space on either side. This improves readability and follows Python conventions."
+        }
+      ]
+    },
+    {
+      "file_path": "/Users/nitinsinghal/CodeAnalysis/ResSysExamples.py",
+      "analysis_status": "pending",
+      "lines_of_code": 97,
+      "complexity_score": 0,
+      "processing_time": 0.0,
+      "violation_count": 5,
+      "violations": [
+        {
+          "rule_id": "IMP-001",
+          "category": "imports",
+          "severity": "low",
+          "line_number": null,
+          "column_number": null,
+          "description": "Potential violation of: Unused import",
+          "suggested_fix": "Remove unused imports to keep the code clean and reduce memory usage. Unused imports can confuse developers about dependencies.",
+          "confidence_score": 0.3755926898375985,
+          "rule_title": "Unused import",
+          "rule_description": "Remove unused imports to keep the code clean and reduce memory usage. Unused imports can confuse developers about dependencies."
+        },
+        {
+          "rule_id": "PERF-002",
+          "category": "performance",
+          "severity": "low",
+          "line_number": null,
+          "column_number": null,
+          "description": "Potential violation of: Use list comprehension instead of loop",
+          "suggested_fix": "List comprehensions are more Pythonic and often faster than equivalent for loops for creating lists.",
+          "confidence_score": 0.3673040447340086,
+          "rule_title": "Use list comprehension instead of loop",
+          "rule_description": "List comprehensions are more Pythonic and often faster than equivalent for loops for creating lists."
+        },
+        {
+          "rule_id": "PEP8-E225",
+          "category": "formatting",
+          "severity": "medium",
+          "line_number": null,
+          "column_number": null,
+          "description": "Potential violation of: Missing whitespace around operator",
+          "suggested_fix": "Binary operators should be surrounded by a single space on either side. This improves readability and follows Python conventions.",
+          "confidence_score": 0.3416881327738359,
+          "rule_title": "Missing whitespace around operator",
+          "rule_description": "Binary operators should be surrounded by a single space on either side. This improves readability and follows Python conventions."
+        },
+        {
+          "rule_id": "IMP-002",
+          "category": "imports",
+          "severity": "medium",
+          "line_number": null,
+          "column_number": null,
+          "description": "Potential violation of: Import should be at top of file",
+          "suggested_fix": "All imports should be at the top of the file, after module docstrings and before module globals and constants.",
+          "confidence_score": 0.3165877397026773,
+          "rule_title": "Import should be at top of file",
+          "rule_description": "All imports should be at the top of the file, after module docstrings and before module globals and constants."
+        },
+        {
+          "rule_id": "IMP-003",
+          "category": "imports",
+          "severity": "high",
+          "line_number": null,
+          "column_number": null,
+          "description": "Potential violation of: Avoid wildcard imports",
+          "suggested_fix": "Avoid using 'from module import *' as it pollutes the namespace and makes it unclear where names come from.",
+          "confidence_score": 0.30760880847989513,
+          "rule_title": "Avoid wildcard imports",
+          "rule_description": "Avoid using 'from module import *' as it pollutes the namespace and makes it unclear where names come from."
+        }
+      ]
+    }
+  ]
+}

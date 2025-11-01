@@ -1,0 +1,27 @@
+{
+  "file_path": "output_analysis/Kaggle_NFLBigdataBowl22.py_20251101_164559.diff",
+  "diff_content": "",
+  "fixes_applied": [
+    {
+      "file_path": "/Users/nitinsinghal/CodeAnalysis/Kaggle_NFLBigdataBowl22.py",
+      "line_number": 12,
+      "column_number": 1,
+      "original_code": "import pandas as pd",
+      "fixed_code": "import datetime\nimport warnings\nimport pandas as pd\nfrom sklearn.ensemble import RandomForestRegressor\nfrom xgboost import XGBRegressor\nfrom vecstack import stacking\nfrom sklearn.preprocessing import StandardScaler, OneHotEncoder\nfrom sklearn.model_selection import GridSearchCV\nfrom sklearn.pipeline import Pipeline",
+      "violation_description": "Imports should be grouped and ordered according to PEP 8 guidelines: standard library imports, related third-party imports, and local application/library specific imports.",
+      "rule_id": "import_order",
+      "confidence_score": 0.9
+    },
+    {
+      "file_path": "/Users/nitinsinghal/CodeAnalysis/Kaggle_NFLBigdataBowl22.py",
+      "line_number": 12,
+      "column_number": 5,
+      "original_code": "import pandas as pd",
+      "fixed_code": "import pandas as pd",
+      "violation_description": "Using 'pd' as an alias for pandas is common, but it should be explicitly stated in the import statement for clarity.",
+      "rule_id": "import_alias",
+      "confidence_score": 0.85
+    }
+  ],
+  "created_at": "2025-11-01T16:45:59.000939"
+}

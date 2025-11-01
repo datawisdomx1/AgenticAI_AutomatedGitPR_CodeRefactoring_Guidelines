@@ -1,0 +1,27 @@
+{
+  "file_path": "output_analysis/NLP_TopicModel.py_20251101_164558.diff",
+  "diff_content": "--- a//Users/nitinsinghal/CodeAnalysis/NLP_TopicModel.py+++ b//Users/nitinsinghal/CodeAnalysis/NLP_TopicModel.py@@ -7,7 +7,12 @@ \"\"\"\n \n from gensim import corpora\n-from gensim import models\n+import gensim.models\n+import pyLDAvis\n+import pyLDAvis.gensim_models\n+import spacy\n+import pandas as pd\n+import re\n import pyLDAvis\n import pyLDAvis.gensim_models\n import spacy\n",
+  "fixes_applied": [
+    {
+      "file_path": "/Users/nitinsinghal/CodeAnalysis/NLP_TopicModel.py",
+      "line_number": 14,
+      "column_number": 5,
+      "original_code": "import pandas as pd",
+      "fixed_code": "import pandas as pd",
+      "violation_description": "Using 'pd' as an alias for pandas is common, but it should be explicitly stated in the import statement for clarity.",
+      "rule_id": "import_alias",
+      "confidence_score": 0.85
+    },
+    {
+      "file_path": "/Users/nitinsinghal/CodeAnalysis/NLP_TopicModel.py",
+      "line_number": 10,
+      "column_number": 5,
+      "original_code": "from gensim import models",
+      "fixed_code": "import gensim.models\nimport pyLDAvis\nimport pyLDAvis.gensim_models\nimport spacy\nimport pandas as pd\nimport re",
+      "violation_description": "Imports should be grouped and ordered according to PEP 8 guidelines: standard library imports, related third-party imports, and local application/library-specific imports.",
+      "rule_id": "import_order",
+      "confidence_score": 0.9
+    }
+  ],
+  "created_at": "2025-11-01T16:45:58.999906"
+}

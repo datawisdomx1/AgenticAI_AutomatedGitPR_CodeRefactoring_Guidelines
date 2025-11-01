@@ -1,0 +1,250 @@
+{
+  "timestamp": "2025-11-01T16:45:59.005572",
+  "summary": {
+    "total_files_modified": 10,
+    "total_fixes_applied": 28,
+    "average_confidence_score": 0.841,
+    "most_common_violations": {
+      "import_order": 8,
+      "import_alias": 3,
+      "line_length": 3,
+      "variable_naming": 3,
+      "function_naming": 1,
+      "PEP8-004": 1,
+      "PEP8-003": 1,
+      "PEP8-002": 1,
+      "PEP8-001": 1,
+      "unnecessary_pass": 1
+    }
+  },
+  "files": [
+    {
+      "file_path": "output_analysis/Kaggle_StoreSalesForecast.py_20251101_164558.diff",
+      "fixes_count": 2,
+      "fixes": [
+        {
+          "line_number": 12,
+          "rule_id": "import_order",
+          "description": "Imports should be grouped and ordered according to PEP 8 guidelines: standard library imports, related third-party imports, and local application/library-specific imports.",
+          "confidence": 0.9
+        },
+        {
+          "line_number": 12,
+          "rule_id": "import_alias",
+          "description": "Using 'pd' as an alias for pandas is common, but it should be explicitly stated in the import statement for clarity.",
+          "confidence": 0.85
+        }
+      ]
+    },
+    {
+      "file_path": "output_analysis/CodeRefactoringAgents.py_20251101_164558.diff",
+      "fixes_count": 2,
+      "fixes": [
+        {
+          "line_number": 50,
+          "rule_id": "line_length",
+          "description": "Lines should not exceed 79 characters in length to improve readability.",
+          "confidence": 0.85
+        },
+        {
+          "line_number": 1,
+          "rule_id": "import_order",
+          "description": "Imports should be grouped in the following order: standard library imports, related third-party imports, and local application/library specific imports.",
+          "confidence": 0.9
+        }
+      ]
+    },
+    {
+      "file_path": "output_analysis/ResSysExamples.py_20251101_164558.diff",
+      "fixes_count": 3,
+      "fixes": [
+        {
+          "line_number": 16,
+          "rule_id": "variable_naming",
+          "description": "Variable names should be descriptive and follow the snake_case naming convention.",
+          "confidence": 0.8
+        },
+        {
+          "line_number": 15,
+          "rule_id": "variable_naming",
+          "description": "Variable names should be descriptive and follow the snake_case naming convention.",
+          "confidence": 0.8
+        },
+        {
+          "line_number": 12,
+          "rule_id": "import_order",
+          "description": "Imports should be grouped in the following order: standard library imports, related third-party imports, and local application/library specific imports.",
+          "confidence": 0.9
+        }
+      ]
+    },
+    {
+      "file_path": "output_analysis/ConversationalChatbot.py_20251101_164558.diff",
+      "fixes_count": 2,
+      "fixes": [
+        {
+          "line_number": 12,
+          "rule_id": "function_naming",
+          "description": "Function names should be lowercase, with words separated by underscores as necessary to improve readability.",
+          "confidence": 0.8
+        },
+        {
+          "line_number": 2,
+          "rule_id": "import_order",
+          "description": "Imports should be grouped and ordered according to PEP 8 guidelines.",
+          "confidence": 0.9
+        }
+      ]
+    },
+    {
+      "file_path": "output_analysis/LSTMANNRFRegressor_KaggleAllStateClaims.py_20251101_164558.diff",
+      "fixes_count": 2,
+      "fixes": [
+        {
+          "line_number": 14,
+          "rule_id": "line_length",
+          "description": "Lines should not exceed 79 characters as per PEP 8 guidelines. Long import statements can be split into multiple lines.",
+          "confidence": 0.85
+        },
+        {
+          "line_number": 11,
+          "rule_id": "import_order",
+          "description": "Imports should be grouped and ordered according to PEP 8 guidelines: standard library imports, related third-party imports, and local application/library specific imports.",
+          "confidence": 0.9
+        }
+      ]
+    },
+    {
+      "file_path": "output_analysis/NLP_TopicModel.py_20251101_164558.diff",
+      "fixes_count": 2,
+      "fixes": [
+        {
+          "line_number": 14,
+          "rule_id": "import_alias",
+          "description": "Using 'pd' as an alias for pandas is common, but it should be explicitly stated in the import statement for clarity.",
+          "confidence": 0.85
+        },
+        {
+          "line_number": 10,
+          "rule_id": "import_order",
+          "description": "Imports should be grouped and ordered according to PEP 8 guidelines: standard library imports, related third-party imports, and local application/library-specific imports.",
+          "confidence": 0.9
+        }
+      ]
+    },
+    {
+      "file_path": "output_analysis/Kaggle_NFLBigdataBowl22.py_20251101_164559.diff",
+      "fixes_count": 2,
+      "fixes": [
+        {
+          "line_number": 12,
+          "rule_id": "import_order",
+          "description": "Imports should be grouped and ordered according to PEP 8 guidelines: standard library imports, related third-party imports, and local application/library specific imports.",
+          "confidence": 0.9
+        },
+        {
+          "line_number": 12,
+          "rule_id": "import_alias",
+          "description": "Using 'pd' as an alias for pandas is common, but it should be explicitly stated in the import statement for clarity.",
+          "confidence": 0.85
+        }
+      ]
+    },
+    {
+      "file_path": "output_analysis/RedditDataLoad.py_20251101_164559.diff",
+      "fixes_count": 4,
+      "fixes": [
+        {
+          "line_number": 35,
+          "rule_id": "PEP8-004",
+          "description": "Line length should not exceed 79 characters as per PEP 8 guidelines.",
+          "confidence": 0.75
+        },
+        {
+          "line_number": 31,
+          "rule_id": "PEP8-003",
+          "description": "Magic numbers should be avoided; use named constants instead.",
+          "confidence": 0.8
+        },
+        {
+          "line_number": 18,
+          "rule_id": "PEP8-002",
+          "description": "Variable names should be descriptive and follow the snake_case naming convention.",
+          "confidence": 0.85
+        },
+        {
+          "line_number": 13,
+          "rule_id": "PEP8-001",
+          "description": "Imports should be grouped in a specific order: standard library imports, related third-party imports, and local application/library specific imports.",
+          "confidence": 0.9
+        }
+      ]
+    },
+    {
+      "file_path": "output_analysis/ReinfLearn_Example.py_20251101_164559.diff",
+      "fixes_count": 5,
+      "fixes": [
+        {
+          "line_number": 20,
+          "rule_id": "unnecessary_pass",
+          "description": "Using 'pass' in a function or class definition is unnecessary if the function is not implemented. It should be removed or implemented.",
+          "confidence": 0.7
+        },
+        {
+          "line_number": 15,
+          "rule_id": "variable_naming_convention",
+          "description": "Variable names should be descriptive and follow the snake_case convention.",
+          "confidence": 0.75
+        },
+        {
+          "line_number": 10,
+          "rule_id": "function_missing_docstring",
+          "description": "Functions should have docstrings to describe their purpose and usage.",
+          "confidence": 0.8
+        },
+        {
+          "line_number": 2,
+          "rule_id": "docstring_missing",
+          "description": "The file lacks a module-level docstring, which is important for documentation and understanding the purpose of the code.",
+          "confidence": 0.85
+        },
+        {
+          "line_number": 1,
+          "rule_id": "import_missing",
+          "description": "The code does not import any necessary modules, which may lead to undefined behavior if external libraries are needed.",
+          "confidence": 0.9
+        }
+      ]
+    },
+    {
+      "file_path": "output_analysis/CNN_CIFAR10_ImageClassification.py_20251101_164559.diff",
+      "fixes_count": 4,
+      "fixes": [
+        {
+          "line_number": 38,
+          "rule_id": "line_length",
+          "description": "Lines should not exceed 79 characters as per PEP 8 guidelines.",
+          "confidence": 0.75
+        },
+        {
+          "line_number": 20,
+          "rule_id": "variable_naming",
+          "description": "Variable names should be descriptive and follow snake_case convention.",
+          "confidence": 0.8
+        },
+        {
+          "line_number": 13,
+          "rule_id": "import_style",
+          "description": "Use of 'from ... import ...' should be consistent and follow PEP 8 guidelines.",
+          "confidence": 0.85
+        },
+        {
+          "line_number": 11,
+          "rule_id": "import_order",
+          "description": "Imports should be grouped and ordered according to PEP 8 guidelines.",
+          "confidence": 0.9
+        }
+      ]
+    }
+  ]
+}

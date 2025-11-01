@@ -1,0 +1,37 @@
+{
+  "file_path": "output_analysis/ResSysExamples.py_20251101_164558.diff",
+  "diff_content": "--- a//Users/nitinsinghal/CodeAnalysis/ResSysExamples.py+++ b//Users/nitinsinghal/CodeAnalysis/ResSysExamples.py@@ -9,11 +9,12 @@ # RecSys Examples - Recommender system\n # movielens data - https://grouplens.org/datasets/movielens/\n \n+import numpy as np\n import pandas as pd\n import numpy as np\n \n-movies = pd.read_csv('/Users/nitinsinghal/Data/ml-25m/movies.csv')\n-ratings = pd.read_csv('/Users/nitinsinghal/Data/ml-25m/ratings.csv')\n+movie_data\n+user_ratings\n \n print(movies.info())\n print(movies.describe())\n",
+  "fixes_applied": [
+    {
+      "file_path": "/Users/nitinsinghal/CodeAnalysis/ResSysExamples.py",
+      "line_number": 16,
+      "column_number": 1,
+      "original_code": "ratings = pd.read_csv('/Users/nitinsinghal/Data/ml-25m/ratings.csv')",
+      "fixed_code": "user_ratings",
+      "violation_description": "Variable names should be descriptive and follow the snake_case naming convention.",
+      "rule_id": "variable_naming",
+      "confidence_score": 0.8
+    },
+    {
+      "file_path": "/Users/nitinsinghal/CodeAnalysis/ResSysExamples.py",
+      "line_number": 15,
+      "column_number": 1,
+      "original_code": "movies = pd.read_csv('/Users/nitinsinghal/Data/ml-25m/movies.csv')",
+      "fixed_code": "movie_data",
+      "violation_description": "Variable names should be descriptive and follow the snake_case naming convention.",
+      "rule_id": "variable_naming",
+      "confidence_score": 0.8
+    },
+    {
+      "file_path": "/Users/nitinsinghal/CodeAnalysis/ResSysExamples.py",
+      "line_number": 12,
+      "column_number": 1,
+      "original_code": "import pandas as pd",
+      "fixed_code": "import numpy as np\nimport pandas as pd",
+      "violation_description": "Imports should be grouped in the following order: standard library imports, related third-party imports, and local application/library specific imports.",
+      "rule_id": "import_order",
+      "confidence_score": 0.9
+    }
+  ],
+  "created_at": "2025-11-01T16:45:58.996549"
+}

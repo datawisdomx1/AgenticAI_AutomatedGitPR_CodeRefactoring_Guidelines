@@ -1,0 +1,22 @@
+Requirement already satisfied: tokenizers in /opt/anaconda3/lib/python3.12/site-packages (0.20.3)
+Collecting tokenizers
+  Using cached tokenizers-0.22.1-cp39-abi3-macosx_11_0_arm64.whl.metadata (6.8 kB)
+Requirement already satisfied: huggingface-hub<2.0,>=0.16.4 in /opt/anaconda3/lib/python3.12/site-packages (from tokenizers) (0.27.0)
+Requirement already satisfied: filelock in /opt/anaconda3/lib/python3.12/site-packages (from huggingface-hub<2.0,>=0.16.4->tokenizers) (3.17.0)
+Requirement already satisfied: fsspec>=2023.5.0 in /opt/anaconda3/lib/python3.12/site-packages (from huggingface-hub<2.0,>=0.16.4->tokenizers) (2025.3.2)
+Requirement already satisfied: packaging>=20.9 in /opt/anaconda3/lib/python3.12/site-packages (from huggingface-hub<2.0,>=0.16.4->tokenizers) (24.2)
+Requirement already satisfied: pyyaml>=5.1 in /opt/anaconda3/lib/python3.12/site-packages (from huggingface-hub<2.0,>=0.16.4->tokenizers) (6.0.2)
+Requirement already satisfied: requests in /opt/anaconda3/lib/python3.12/site-packages (from huggingface-hub<2.0,>=0.16.4->tokenizers) (2.32.4)
+Requirement already satisfied: tqdm>=4.42.1 in /opt/anaconda3/lib/python3.12/site-packages (from huggingface-hub<2.0,>=0.16.4->tokenizers) (4.67.1)
+Requirement already satisfied: typing-extensions>=3.7.4.3 in /opt/anaconda3/lib/python3.12/site-packages (from huggingface-hub<2.0,>=0.16.4->tokenizers) (4.12.2)
+Requirement already satisfied: charset_normalizer<4,>=2 in /opt/anaconda3/lib/python3.12/site-packages (from requests->huggingface-hub<2.0,>=0.16.4->tokenizers) (3.3.2)
+Requirement already satisfied: idna<4,>=2.5 in /opt/anaconda3/lib/python3.12/site-packages (from requests->huggingface-hub<2.0,>=0.16.4->tokenizers) (3.7)
+Requirement already satisfied: urllib3<3,>=1.21.1 in /opt/anaconda3/lib/python3.12/site-packages (from requests->huggingface-hub<2.0,>=0.16.4->tokenizers) (2.3.0)
+Requirement already satisfied: certifi>=2017.4.17 in /opt/anaconda3/lib/python3.12/site-packages (from requests->huggingface-hub<2.0,>=0.16.4->tokenizers) (2025.4.26)
+Using cached tokenizers-0.22.1-cp39-abi3-macosx_11_0_arm64.whl (2.9 MB)
+Installing collected packages: tokenizers
+  Attempting uninstall: tokenizers
+    Found existing installation: tokenizers 0.20.3
+    Uninstalling tokenizers-0.20.3:
+      Successfully uninstalled tokenizers-0.20.3
+Successfully installed tokenizers-0.22.1
